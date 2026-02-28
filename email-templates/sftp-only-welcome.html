@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to {{projectName}}</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+  <div style="background-color: #f8f9fa; border-radius: 8px; padding: 30px; margin-bottom: 20px;">
+    <h1 style="color: #0066cc; margin-top: 0;">Welcome to {{projectName}}</h1>
+    <p style="font-size: 16px; margin-bottom: 20px;">Your SFTP account has been created successfully.</p>
+  </div>
+
+  <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 20px;">
+    <h2 style="color: #495057; font-size: 18px; margin-top: 0;">Account Details</h2>
+    
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr>
+        <td style="padding: 10px 0; border-bottom: 1px solid #e9ecef;"><strong>Email:</strong></td>
+        <td style="padding: 10px 0; border-bottom: 1px solid #e9ecef;">{{email}}</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px 0; border-bottom: 1px solid #e9ecef;"><strong>SFTP Username:</strong></td>
+        <td style="padding: 10px 0; border-bottom: 1px solid #e9ecef;"><code style="background-color: #f8f9fa; padding: 4px 8px; border-radius: 4px;">{{username}}</code></td>
+      </tr>
+      <tr>
+        <td style="padding: 10px 0;"><strong>Access Type:</strong></td>
+        <td style="padding: 10px 0;"><span style="background-color: #6c757d; color: white; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: bold;">SFTP ONLY</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="background-color: #d1ecf1; border: 1px solid #17a2b8; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+    <h3 style="color: #0c5460; margin-top: 0; font-size: 16px;">🔑 Authentication Method</h3>
+    <p style="margin: 0; color: #0c5460;">Your account uses SSH key authentication. Use the SSH key that was configured during account creation to connect to the SFTP server.</p>
+  </div>
+
+  <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 20px;">
+    <h2 style="color: #495057; font-size: 18px; margin-top: 0;">Connection Information</h2>
+    
+    <div style="background-color: #f8f9fa; border-radius: 4px; padding: 15px; margin-bottom: 15px;">
+      <p style="margin: 0 0 5px 0; font-size: 14px; color: #6c757d;">SFTP Server:</p>
+      <p style="margin: 0; font-family: 'Courier New', monospace; font-size: 14px; color: #212529;">{{sftpEndpoint}}</p>
+    </div>
+
+    <div style="background-color: #f8f9fa; border-radius: 4px; padding: 15px; margin-bottom: 15px;">
+      <p style="margin: 0 0 5px 0; font-size: 14px; color: #6c757d;">Username:</p>
+      <p style="margin: 0; font-family: 'Courier New', monospace; font-size: 14px; color: #212529;">{{username}}</p>
+    </div>
+
+    <div style="background-color: #f8f9fa; border-radius: 4px; padding: 15px;">
+      <p style="margin: 0 0 5px 0; font-size: 14px; color: #6c757d;">Port:</p>
+      <p style="margin: 0; font-family: 'Courier New', monospace; font-size: 14px; color: #212529;">22</p>
+    </div>
+  </div>
+
+  <div style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 20px;">
+    <h2 style="color: #495057; font-size: 18px; margin-top: 0;">Connecting via Command Line</h2>
+    
+    <p style="margin: 0 0 10px 0;">Use the following command to connect:</p>
+    
+    <div style="background-color: #2d2d2d; color: #f8f8f2; border-radius: 4px; padding: 15px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', monospace; font-size: 13px;">sftp -i /path/to/your/private-key {{username}}@{{sftpEndpoint}}</code>
+    </div>
+  </div>
+
+  <div style="background-color: #e7f3ff; border-left: 4px solid #0066cc; padding: 15px; margin-bottom: 20px;">
+    <h3 style="color: #0066cc; margin-top: 0; font-size: 16px;">📋 What You Can Do</h3>
+    <ul style="margin: 10px 0; padding-left: 20px;">
+      <li>Upload files via SFTP</li>
+      <li>Download files via SFTP</li>
+      <li>List and manage your files</li>
+      <li>Integrate with automated workflows and scripts</li>
+    </ul>
+    <p style="margin: 10px 0 0 0; font-size: 14px; color: #495057;"><strong>Note:</strong> Your account has SFTP access only. Web portal access is not available.</p>
+  </div>
+
+  <div style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+    <h3 style="color: #856404; margin-top: 0; font-size: 16px;">💡 Tips</h3>
+    <ul style="margin: 10px 0; padding-left: 20px; color: #856404;">
+      <li>Save your username for future connections</li>
+      <li>Keep your SSH private key secure and never share it</li>
+      <li>Use SFTP clients like FileZilla, WinSCP, or Cyberduck for GUI access</li>
+      <li>Contact your administrator if you need to add additional SSH keys</li>
+    </ul>
+  </div>
+
+  <div style="text-align: center; padding: 20px 0; border-top: 1px solid #dee2e6; margin-top: 30px;">
+    <p style="color: #6c757d; font-size: 14px; margin: 0;">If you did not request this account, please contact your system administrator.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+Welcome to {{projectName}}
+
+Your web portal account has been created successfully.
+
+ACCOUNT DETAILS
+================
+Email: {{email}}
+Temporary Password: {{temporaryPassword}}
+Access Type: WEB ONLY
+
+IMPORTANT SECURITY NOTICE
+==========================
+You will be required to change your password on first login. Please keep your temporary password secure and do not share it with anyone.
+
+GETTING STARTED
+===============
+
+1. Access the Web Portal
+   Visit: {{webPortalUrl}}
+
+2. Log In
+   Use your email and temporary password to sign in.
+
+3. Change Your Password
+   You'll be prompted to set a new secure password.
+
+4. Start Transferring Files
+   Upload and download files through the web interface.
+
+WHAT YOU CAN DO
+===============
+- Upload files through the web interface
+- Download your files
+- View your file list and storage usage
+- Manage your profile and change password
+
+Note: Your account has web portal access only. SFTP access is not available.
+
+---
+If you did not request this account, please contact your system administrator.

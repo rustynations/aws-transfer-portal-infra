@@ -1,0 +1,44 @@
+Welcome to {{projectName}}
+
+Your SFTP account has been created successfully.
+
+ACCOUNT DETAILS
+================
+Email: {{email}}
+SFTP Username: {{username}}
+Access Type: SFTP ONLY
+
+AUTHENTICATION METHOD
+=====================
+Your account uses SSH key authentication. Use the SSH key that was configured during account creation to connect to the SFTP server.
+
+CONNECTION INFORMATION
+======================
+SFTP Server: {{sftpEndpoint}}
+Username: {{username}}
+Port: 22
+
+CONNECTING VIA COMMAND LINE
+============================
+Use the following command to connect:
+
+sftp -i /path/to/your/private-key {{username}}@{{sftpEndpoint}}
+
+WHAT YOU CAN DO
+===============
+- Upload files via SFTP
+- Download files via SFTP
+- List and manage your files
+- Integrate with automated workflows and scripts
+
+Note: Your account has SFTP access only. Web portal access is not available.
+
+TIPS
+====
+- Save your username for future connections
+- Keep your SSH private key secure and never share it
+- Use SFTP clients like FileZilla, WinSCP, or Cyberduck for GUI access
+- Contact your administrator if you need to add additional SSH keys
+
+---
+If you did not request this account, please contact your system administrator.

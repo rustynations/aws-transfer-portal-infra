@@ -1,0 +1,57 @@
+Welcome to {{projectName}}
+
+Your hybrid account has been created successfully with both web portal and SFTP access.
+
+ACCOUNT DETAILS
+================
+Email: {{email}}
+SFTP Username: {{username}}
+Temporary Password: {{temporaryPassword}}
+Access Type: HYBRID
+
+IMPORTANT SECURITY NOTICE
+==========================
+You will be required to change your web portal password on first login. Your SFTP access uses SSH key authentication. Please keep both credentials secure.
+
+WEB PORTAL ACCESS
+=================
+
+Portal URL: {{webPortalUrl}}
+
+Login Credentials:
+- Email: {{email}}
+- Temporary Password: {{temporaryPassword}}
+
+Web Portal Features:
+- Upload and download files through browser
+- View file list and storage usage
+- Manage SSH keys
+- Change password and manage profile
+
+SFTP ACCESS
+===========
+
+SFTP Server: {{sftpEndpoint}}
+Username: {{username}}
+Port: 22
+Authentication: SSH key (configured during account creation)
+
+Command Line Connection:
+sftp -i /path/to/your/private-key {{username}}@{{sftpEndpoint}}
+
+YOUR CAPABILITIES
+=================
+- Web Portal: Upload/download files, manage SSH keys, view statistics
+- SFTP: Automated file transfers, command-line access, integration with scripts
+- Flexibility: Choose the access method that works best for your workflow
+
+GETTING STARTED TIPS
+====================
+- Log in to the web portal first and change your password
+- Save your SFTP username for future connections
+- You can add additional SSH keys through the web portal
+- Both access methods work with the same file storage
+- Use SFTP clients like FileZilla, WinSCP, or Cyberduck for GUI access
+
+---
+If you did not request this account, please contact your system administrator.

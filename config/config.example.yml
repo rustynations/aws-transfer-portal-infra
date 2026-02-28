@@ -1,0 +1,134 @@
+# AWS Transfer Portal Kit Configuration
+# Copy this file to config.yml and customize for your deployment
+
+# ============================================================================
+# REQUIRED: Project Name
+# ============================================================================
+# Unique identifier for this project (used in resource naming)
+# This is a namespace/identity key, NOT a display name
+# Use alphanumeric characters, hyphens, and underscores only
+# WARNING: Changing this value will create NEW infrastructure (not rename existing)
+projectName: "my-file-transfer"
+
+# ============================================================================
+# REQUIRED: Deployment Configuration
+# ============================================================================
+# AWS account and region for all stacks, plus GitHub repo for CI/CD pipeline
+deployment:
+  accountId: "123456789012"
+  region: "us-east-1"
+  # Optional: Custom domain for CloudFront (requires ACM certificate)
+  # domainName: "portal.example.com"
+  github:
+    owner: "your-github-username"
+    repo: "aws-transfer-portal-frontend"
+    branch: "main"
+
+# ============================================================================
+# REQUIRED: SFTP/FTPS Configuration
+# ============================================================================
+sftp:
+  # Protocols to enable (SFTP, FTPS, or both)
+  protocols:
+    - "SFTP"
+    # - "FTPS"
+  
+  # Optional: Custom domain for Transfer Family server
+  # customDomain: "sftp.example.com"
+  # certificateArn: "arn:aws:acm:us-east-1:123456789012:certificate/abc123"
+
+# ============================================================================
+# OPTIONAL: Storage Configuration
+# ============================================================================
+storage:
+  # Automatic file deletion after specified days (optional)
+  # If not specified, files are retained indefinitely
+  # retentionDays: 90
+
+# ============================================================================
+# OPTIONAL: Shared Folder Configuration
+# ============================================================================
+# Enable a shared folder accessible to all users
+# Useful for company-wide documents, templates, announcements, etc.
+# 
+# sharedFolder:
+#   # Enable or disable shared folder feature
+#   enabled: true
+#   
+#   # Folder name (defaults to 'shared' if not specified)
+#   # Users will see this as a directory in SFTP and a tab in web portal
+#   name: "shared"
+#   
+#   # Permissions for all users (defaults to 'read-write' if not specified)
+#   # - read-only: Users can list and download files, but not upload or delete
+#   # - read-write: Users can list, download, upload, and delete files
+#   permissions: "read-write"
+
+# ============================================================================
+# OPTIONAL: Web Portal Configuration
+# ============================================================================
+# webPortal:
+#   # Custom domain for web portal (CloudFront)
+#   customDomain: "files.example.com"
+#   # ACM certificate ARN (must be in us-east-1 for CloudFront)
+#   certificateArn: "arn:aws:acm:us-east-1:123456789012:certificate/def456"
+
+# ============================================================================
+# OPTIONAL: Bootstrap Configuration
+# ============================================================================
+# Creates initial admin user during deployment
+# bootstrap:
+#   adminEmail: "admin@example.com"
+#   # Password must meet complexity requirements:
+#   # - At least 8 characters
+#   # - Uppercase, lowercase, number, and special character
+#   adminPassword: "ChangeMe123!"
+
+# ============================================================================
+# OPTIONAL: AWS Configuration
+# ============================================================================
+# aws:
+#   region: "us-east-1"
+#   # accountId: "123456789012"  # Optional, will be inferred if not provided
+
+# ============================================================================
+# OPTIONAL: Notification Configuration
+# ============================================================================
+# notifications:
+#   # Email address for deployment notifications
+#   # Receives alerts for: stack deployment, user activity
+#   # 
+#   # IMPORTANT: AWS SNS is in sandbox mode by default
+#   # - You MUST confirm the subscription email sent by SNS (check spam folder!)
+#   # - For production use, request SNS production access in AWS Console
+#   # 
+#   email: "ops@example.com"
+#   
+#   # Email address for sending user welcome emails via SES
+#   # This address will be used as the "From" address for welcome emails
+#   # 
+#   # IMPORTANT: SES is in sandbox mode by default
+#   # - You MUST verify this email address in SES (check for verification email!)
+#   # - In sandbox mode, you can only send TO verified addresses
+#   # - For production use, request SES production access in AWS Console
+#   # 
+#   # If not specified, welcome emails will not be sent (Cognito emails suppressed)
+#   # 
+#   fromEmail: "noreply@example.com"
+
+# ============================================================================
+# OPTIONAL: Resource Tags
+# ============================================================================
+# Tags are applied to all taggable AWS resources for cost allocation and organization
+# Useful for tracking costs per project/team in AWS Cost Explorer
+# 
+# Default tags automatically applied:
+#   - ProjectName: <your projectName>
+#   - ManagedBy: aws-transfer-portal-kit
+# 
+# Add custom tags below (key-value pairs):
+# tags:
+#   Environment: "production"
+#   Team: "operations"
+#   CostCenter: "engineering"
+#   Owner: "team@example.com"
