@@ -23,12 +23,13 @@ const READ_ONLY_FIELDS = new Set([
 const EDITABLE_FIELDS = new Set([
   'appName', 'loginDescription', 'logoKey', 'faviconKey', 'acceptedFileTypes',
   'maxFileSize', 'maxStoragePerUser', 'maxFilesPerUser',
-  'motd', 'defaultAccessType',
+  'motd', 'defaultAccessType', 'footerText', 'footerLink', 'helpUrl',
 ]);
 
 /** Fields exposed on the public (unauthenticated) endpoint */
 const PUBLIC_FIELDS = new Set([
   'appName', 'loginDescription', 'logoUrl', 'faviconUrl', 'motd',
+  'footerText', 'footerLink', 'helpUrl',
   'userPoolId', 'userPoolClientId', 'region', 'apiEndpoint', 'sftpEnabled',
 ]);
 
