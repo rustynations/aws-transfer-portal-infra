@@ -79,6 +79,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Shared folder access explicitly granted through session policies
 - Read-only shared folder permissions enforced at API layer
 
-[1.2.0]: https://github.com/rusty428/aws-transfer-portal-kit/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/rusty428/aws-transfer-portal-kit/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/rusty428/aws-transfer-portal-kit/releases/tag/v1.0.0
+[1.2.0]: https://github.com/rusty428/aws-transfer-portal-infra/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/rusty428/aws-transfer-portal-infra/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/rusty428/aws-transfer-portal-infra/releases/tag/v1.0.0

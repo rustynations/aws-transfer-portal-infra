@@ -121,19 +121,4 @@ To test your templates:
 - Keep layouts simple (email clients have limited CSS support)
 
 
-## Current Deployment Status ✅
 
-- **Sender Email**: rustynations@gmail.com (verified in SES)
-- **Templates Deployed**: 4 templates (all access types)
-- **Project Name**: test-transfer-portal
-- **Web Portal URL**: http://localhost:5174 (hardcoded, will be configurable later)
-- **SFTP Endpoint**: s-026fa3d4280d42789.server.transfer.us-east-1.amazonaws.com
-- **CDK Version**: 2.80.0 (downgraded to match bootstrap v20)
-
-### Deployed Templates:
-- ✅ test-transfer-portal-admin-welcome
-- ✅ test-transfer-portal-web-only-welcome
-- ✅ test-transfer-portal-sftp-only-welcome
-- ✅ test-transfer-portal-hybrid-welcome
-
-All templates are live and ready to send welcome emails when users are created!

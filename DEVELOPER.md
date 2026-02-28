@@ -27,8 +27,8 @@ This guide provides detailed information for developers working on the AWS Trans
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rusty428/aws-transfer-portal-kit.git
-   cd aws-transfer-portal-kit
+   git clone https://github.com/rusty428/aws-transfer-portal-infra.git
+   cd aws-transfer-portal-infra
    ```
 
 2. Install dependencies:
@@ -69,7 +69,7 @@ Compiled files are output to the `lib/` directory.
 ## Project Structure
 
 ```
-transfer-portal-kit/
+aws-transfer-portal-infra/
 ├── src/                          # TypeScript source files
 │   ├── bin/                      # CDK app entry point
 │   ├── config/                   # Configuration loader and types
@@ -729,7 +729,7 @@ The S3 prefix conditions on ListBucket provide chroot-like isolation, preventing
 - [AWS Transfer Family Documentation](https://docs.aws.amazon.com/transfer/)
 - [AWS CDK Documentation](https://docs.aws.amazon.com/cdk/)
 - [Amazon Cognito Documentation](https://docs.aws.amazon.com/cognito/)
-- [Project Issues](https://github.com/rusty428/aws-transfer-portal-kit/issues)
+- [Project Issues](https://github.com/rusty428/aws-transfer-portal-infra/issues)
 
 ---
 

@@ -258,8 +258,8 @@ All infrastructure is defined using AWS CDK (TypeScript). For deployment instruc
 
 1. **Clone and Install**
    ```bash
-   git clone https://github.com/rusty428/aws-transfer-portal-kit.git
-   cd aws-transfer-portal-kit
+   git clone https://github.com/rusty428/aws-transfer-portal-infra.git
+   cd aws-transfer-portal-infra
    npm install
    ```
 

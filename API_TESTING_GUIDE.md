@@ -247,10 +247,4 @@ bucket-name/
         └── invoice-template.xlsx
 ```
 
-## Next Steps
 
-1. ~~Deploy the updated stack with `cdk deploy`~~ ✅ Done
-2. Test all API endpoints with both `private` and `shared` folders
-3. ~~Verify permission enforcement for read-only shared folders~~ ✅ Covered by unit tests
-4. ~~Update web portal UI to support folder tabs~~ ✅ Done
-5. Update documentation (README, DEVELOPER.md)

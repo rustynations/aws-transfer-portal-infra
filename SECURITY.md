@@ -4,8 +4,8 @@
 
 If you discover a security vulnerability in the AWS Transfer Portal Kit, please report it by:
 
-1. Opening an issue on GitHub: https://github.com/rusty428/aws-transfer-portal-kit/issues
-2. Or emailing the maintainer directly: rustynations@gmail.com
+1. Opening an issue on GitHub: https://github.com/rusty428/aws-transfer-portal-infra/issues
+2. Or emailing the maintainer directly: maintainer@example.com
 
 Please include:
 - Description of the vulnerability
