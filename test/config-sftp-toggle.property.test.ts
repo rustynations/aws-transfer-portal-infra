@@ -11,7 +11,13 @@ import * as path from 'path';
 import * as os from 'os';
 import * as yaml from 'js-yaml';
 import { ConfigLoader } from '../src/config/loader';
-import { TransferPortalConfig } from '../src/config/types';
+import { DeploymentConfig, TransferPortalConfig } from '../src/config/types';
+
+const stubDeployment: DeploymentConfig = {
+  accountId: '123456789012',
+  region: 'us-east-1',
+  github: { owner: 'test', repo: 'test' },
+};
 
 /**
  * Helper: write a config object to a temp YAML file, load it via ConfigLoader,
@@ -59,6 +65,7 @@ const validConfigArb = fc
   .tuple(projectNameArb, validProtocolsArb, fc.boolean())
   .map(([name, protocols, enabled]) => ({
     projectName: name,
+    deployment: stubDeployment,
     storage: {},
     sftp: {
       enabled,
@@ -135,6 +142,7 @@ describe('Feature: sftp-toggle, Property 2: Enabled requires protocols', () => {
       fc.property(projectNameArb, emptyOrMissingProtocolsArb, (name: string, protocols: any) => {
         const config: TransferPortalConfig = {
           projectName: name,
+          deployment: stubDeployment,
           storage: {},
           sftp: {
             enabled: true,
@@ -168,6 +176,7 @@ describe('Feature: sftp-toggle, Property 3: Disabled skips SFTP validation', () 
       fc.property(projectNameArb, arbitrarySftpFieldsArb, (name: string, sftpFields: any) => {
         const config = {
           projectName: name,
+          deployment: stubDeployment,
           storage: {},
           sftp: {
             enabled: false,
@@ -208,6 +217,7 @@ describe('Feature: sftp-toggle, Property 4: Non-boolean rejected', () => {
       fc.property(projectNameArb, nonBooleanArb, (name: string, nonBoolVal: unknown) => {
         const config = {
           projectName: name,
+          deployment: stubDeployment,
           storage: {},
           sftp: {
             enabled: nonBoolVal as any,
