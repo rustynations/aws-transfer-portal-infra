@@ -78,6 +78,7 @@ export class PublisherStack extends cdk.Stack {
     const pipeline = new codepipeline.Pipeline(this, 'Pipeline', {
       pipelineName: 'transfer-portal-frontend-pipeline',
       restartExecutionOnUpdate: true,
+      crossAccountKeys: false,
     });
 
     pipeline.addStage({
