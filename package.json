@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com:rusty428/aws-transfer-portal-kit.git"
+    "url": "git+https://github.com:rustynations/aws-transfer-portal-kit.git"
   },
   "keywords": [
     "aws",
@@ -30,9 +30,9 @@
   "author": "Rusty Nations",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rusty428/aws-transfer-portal-kit/issues"
+    "url": "https://github.com/rustynations/aws-transfer-portal-kit/issues"
   },
-  "homepage": "https://github.com/rusty428/aws-transfer-portal-kit#readme",
+  "homepage": "https://github.com/rustynations/aws-transfer-portal-kit#readme",
   "dependencies": {
     "@aws-sdk/client-cloudwatch": "^3.989.0",
     "@aws-sdk/client-cloudwatch-logs": "^3.989.0",
