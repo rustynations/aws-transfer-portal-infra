@@ -806,6 +806,11 @@ export class TransferPortalStack extends cdk.Stack {
         'logs:DescribeLogStreams'
       ],
       resources: [
+        // FilterLogEvents, DescribeLogGroups and DescribeLogStreams are Log Group
+        // actions, so they authorize against the Log Group ARN. The Log Stream ARN
+        // (the ':*' suffix) also grants them until the IAM change lands region by
+        // region, so both forms stay listed.
+        `arn:aws:logs:${cdk.Aws.REGION}:${cdk.Aws.ACCOUNT_ID}:log-group:/aws/lambda/${this.config.projectName}-*`,
         `arn:aws:logs:${cdk.Aws.REGION}:${cdk.Aws.ACCOUNT_ID}:log-group:/aws/lambda/${this.config.projectName}-*:*`
       ]
     }));
